@@ -1,0 +1,35 @@
+
+using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+using { /Fortnite.com/Game }
+using { /Fortnite.com/Characters }
+
+# See https://dev.epicgames.com/documentation/en-us/uefn/create-your-own-device-in-verse for how to create a verse device.
+
+# A Verse-authored creative device that can be placed in a level
+hit_detect_device := class(creative_device):
+    var Players : []player = array{}
+
+
+    HandlePlayerHit( DamageResult : damage_result ) : void =
+        Target := DamageResult.Target
+        Amount := DamageResult.Amount
+
+        if (FortCharacterWhoWasHit := fort_character[Target]):
+            Print("Was hit for {Amount}")
+
+        if (Instigator := DamageResult.Instigator?, Agent := Instigator.GetInstigatorAgent[], FortCharacterInstigator := Agent.GetFortCharacter[]):
+            Print("Was hit by another player")
+            FortCharacterInstigator.Damage(Amount * 2.0 )
+
+    # Runs when the device is started in a running game
+    OnBegin<override>()<suspends>:void=
+        set Players = GetPlayspace().GetPlayers()
+
+        if (Boss := Players[0], FortBoss := Boss.GetFortCharacter[]):
+            FortBoss.DamagedEvent().Subscribe(HandlePlayerHit)
+            
+        # TODO: Replace this with your code
+        Print("Hello, world!")
+        Print("2 + 2 = {2 + 2}")
