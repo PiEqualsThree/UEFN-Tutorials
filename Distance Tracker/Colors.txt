@@ -1,0 +1,178 @@
+This is a list of colors as found in the Verse.digest.verse file by Epic Games.
+NOT AFFILIATED WITH EPIC GAMES
+
+To use any of these colors, you must first include the following Verse module:
+
+  using {Verse.org/Colors}
+
+Then, use the following syntax (Replace <YOURCOLOR> with whatever color)
+
+  NamedColors.<YOURCOLOR>
+
+-------------- List of Colors -------------------
+        AliceBlue
+        AntiqueWhite
+        Aqua
+        Aquamarine
+        Azure
+
+        Beige
+        Bisque
+        Black
+        BlanchedAlmond
+        Blue
+        BlueViolet
+        Brown
+        Burlywood
+
+        CadetBlue
+        Chartreuse
+        Chocolate
+        Coral
+        CornflowerBlue
+        Cornsilk
+        Crimson
+        Cyan
+
+        DarkBlue
+        DarkCyan
+        DarkGoldenrod
+        DarkGray
+        DarkGreen
+        DarkGrey
+        DarkKhaki
+        DarkMagenta
+        DarkOliveGreen
+        DarkOrange
+        DarkOrchid
+        DarkRed
+        DarkSalmon
+        DarkSeaGreen
+        DarkSlateBlue
+        DarkSlateGray
+        DarkSlateGrey
+        DarkTurquoise
+        DarkViolet
+        DeepPink
+        DeepSkyBlue
+        DimGray
+        DimGrey
+        DodgerBlue
+
+        Firebrick
+        FloralWhite
+        ForestGreen
+        Fuchsia
+
+        Gainsboro
+        GhostWhite
+        Gold
+        Goldenrod
+        Gray
+        Green
+        GreenYellow
+        Grey
+
+        Honeydew
+        Hotpink
+
+        IndianRed
+        Indigo
+        Ivory
+
+        Khaki
+
+        Lavender
+        LavenderBlush
+        LawnGreen
+        LemonChiffon
+        LightBlue
+        LightCoral
+        LightCyan
+        LightGoldenrodYellow
+        LightGray
+        LightGreen
+        LightGrey
+        LightPink
+        LightSalmon
+        LightSeaGreen
+        LightSkyBlue
+        LightSlateGray
+        LightSlateGrey
+        LightSteelBlue
+        LightYellow
+        Lime
+        LimeGreen
+        Linen
+
+        Magenta
+        Maroon
+        MediumAquamarine
+        MediumBlue
+        MediumOrchid
+        MediumPurple
+        MediumSeaGreen
+        MediumSlateBlue
+        MediumSpringGreen
+        MediumTurquoise
+        MediumVioletRed
+        MidnightBlue
+        MintCream
+        MistyRose
+        Moccasin
+        NavajoWhite
+
+        Navy
+
+        OldLace
+        Olive
+        OliveDrab
+        Orange
+        OrangeRed
+        Orchid
+
+        PaleGoldenrod
+        PaleGreen
+        PaleTurquoise
+        PaleVioletred
+        PapayaWhip
+        PeachPuff
+        Peru
+        Pink
+        Plum
+        PowderBlue
+        Purple
+
+        Red
+        RosyBrown
+        RoyalBlue
+
+        SaddleBrown
+        Salmon
+        SandyBrown
+        SeaGreen
+        SeaShell
+        Sienna
+        Silver
+        SkyBlue
+        SlateBlue
+        SlateGray
+        SlateGrey
+        Snow
+        SpringGreen
+        SteelBlue
+
+        Tan
+        Teal
+        Thistle
+        Tomato
+        Turquoise
+
+        Violet
+
+        Wheat
+        White
+        WhiteSmoke
+
+        Yellow
+        YellowGreen
