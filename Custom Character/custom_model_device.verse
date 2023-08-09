@@ -25,21 +25,24 @@ custom_model_device := class(creative_device):
             
             branch:
                 loop:
-                    Sleep(0.0)
-                    PlayerPos := FortCharacter.GetTransform().Translation
-                    FreddyPos := FreddyProp.GetTransform().Translation
+                    if (FortCharacter.IsActive[]):
+                        Sleep(0.0)
+                        PlayerPos := FortCharacter.GetTransform().Translation
+                        FreddyPos := FreddyProp.GetTransform().Translation
 
-                    DistanceFromPlayer := Distance(PlayerPos, FreddyPos)
-                    
-                    DirectionFreddyToPlayer := PlayerPos - FreddyPos
+                        DistanceFromPlayer := Distance(PlayerPos, FreddyPos)
+                        
+                        DirectionFreddyToPlayer := PlayerPos - FreddyPos
 
-                    Angle := ArcTan(DirectionFreddyToPlayer.X, DirectionFreddyToPlayer.Y) - 3.14 / 2.0
+                        Angle := ArcTan(DirectionFreddyToPlayer.X, DirectionFreddyToPlayer.Y) - 3.14 / 2.0
 
-                    NewRotation := MakeRotation( vector3{ X := 0.0, Y := 0.0, Z := -1.0} , Angle) 
+                        NewRotation := MakeRotation( vector3{ X := 0.0, Y := 0.0, Z := -1.0} , Angle) 
 
-                    FreddyProp.MoveTo(PlayerPos, NewRotation, 0.15)
+                        FreddyProp.MoveTo(PlayerPos, NewRotation, 0.15)
             
             loop:
+                if (not FortCharacter.IsActive[]):
+                    break
                 Sleep(0.0)
                 IsSprintingTuple := FortCharacter.SprintedEvent().Await()
                 if (IsSprintingTuple(1)?):
