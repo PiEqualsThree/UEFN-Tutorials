@@ -1,4 +1,3 @@
-
 using { /Fortnite.com/Devices }
 using { /Fortnite.com/Characters }
 using { /Fortnite.com/UI }
@@ -33,10 +32,15 @@ distance_device := class(creative_device):
         loop:
             Sleep(0.4)
             DistanceVerticalMeters := FortCharacter.GetTransform().Translation.Z / 100.0
-            if (RoundedDistance := Floor[DistanceVerticalMeters]):
+            if (RoundedDistance := Floor[DistanceVerticalMeters] - 3):
                 TextBlock.SetText(UIText("- {RoundedDistance}m -"))
 
+    HandlePlayerJoin(Agent : agent) : void =
+        if (Player := player[Agent]):
+            Player.InitUI()
 
     OnBegin<override>()<suspends>:void=
+        GetPlayspace().PlayerAddedEvent().Subscribe(HandlePlayerJoin)
+
         for (Player : GetPlayspace().GetPlayers()):
             Player.InitUI()
